@@ -1,0 +1,33 @@
+.blog-hero {
+   background-image:linear-gradient(rgba(28, 57, 80, 0.6), rgba(21, 60, 145, 0.6)),
+    url("/Assests/images/Feature Card Background (26).png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+       
+    
+}
+.btn-blog {
+    background: linear-gradient(90deg, #00F2FF 0%, #0072FF 50%, #00F2FF 100%);
+    background-size: 200% auto;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientShift 3s linear infinite;
+    transition: opacity 0.4s ease;
+}
+
+.btn-blog:hover {
+    animation: none;
+    opacity: 0.7;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}

@@ -1,0 +1,9 @@
+.blog-hero {
+   background-image:linear-gradient(rgba(28, 57, 80, 0.6), rgba(21, 60, 145, 0.6)),
+    url("../Assests/images/50dad08bca227179ea6907fd3077fac284b5f4d7.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+       
+    
+}

@@ -1,0 +1,10 @@
+.geographic-hero {
+   background-image:linear-gradient(rgba(28, 57, 80, 0.6), rgba(21, 60, 145, 0.6)),
+    url("../Assests/images/5c1457af7a90c1a53fe1dc13c916566ed358be5c.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+       
+}
+
+

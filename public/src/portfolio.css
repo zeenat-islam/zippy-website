@@ -1,0 +1,14 @@
+.btn-project {
+   background: linear-gradient(90deg, #00F2FF 0%, #0072FF 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}

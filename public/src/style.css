@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    h1, h3, h4, h5, h6,span {
+        font-family: 'Manrope', sans-serif;
+    }
+    h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+    button {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#whatWeDoDropdown li a {
+    transition: color 0.2s ease;
+}
+
+#whatWeDoDropdown li a:hover {
+    color: #00C6FF;
+}
+
+#whatWeDoDropdown h3 a {
+    transition: color 0.2s ease;
+}
+
+#whatWeDoDropdown h3 a:hover {
+    color: #00C6FF;
+}
+
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+
+/* theme-toggle.css */
+.theme-toggle {
+    width: 50px;
+    height: 26px;
+    background: #003BA4;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.theme-toggle.light {
+    background: #E2E8F0;
+}
+
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background: #003BA4;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    transform: translateX(0px);
+}
+
+.theme-toggle.light .toggle-circle {
+    transform: translateX(24px);
+    background:white;
+}
+
+.toggle-icon {
+    width: 12px;
+    height: 12px;
+}
+
+
+
+/* Dark Mode Colors */
+body.dark { 
+    background: #010F23 !important;
+     color: white;
+     }
+
+
+/* Light Mode Colors */
+body.light { 
+    background: white;
+    color: black;
+ }
+body.light nav { 
+    background: white !important;
+ }
+
+.hero-button{
+    width:301px;
+    height:32px;
+    border-radius:9999px;
+    padding:12px 16px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+}
+.gradien-border{
+    border-radius:9999px;
+        padding:1px;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+}
+.started-button{
+  background:linear-gradient(to right,#00C6FF,#0072FF);width:156px;height:40px;border-radius:9999px;border:1px solid transparent;color:white;font-size:14px;font-weight:500
+}
+.started-button2{
+  background:linear-gradient(to right,#00C6FF,#0072FF);
+  width:240px;
+  height:60px;
+  border-radius:9999px;
+  border:1px solid transparent;
+  color:white;
+  font-size:14px;
+  font-weight:500;
+}
+.profile-button
+{
+     width:226.44px;
+    height:62px; 
+    border-radius:9999px; 
+     border:1px solid rgba(255,255,255,0.30);
+    }
+
+.rotate-button{
+     width: 230px;
+        height: 64px;
+        background: #00C6FF;
+        color: #003BA4;
+        padding: 10px;
+        transform: rotate(90deg);
+        transform-origin: right center;
+        right: -83px;
+        top: 324px;
+}
+
+.badge{
+    color:#00C6FF;
+    border: 1px solid;
+    background: linear-gradient(90deg, rgba(2, 238, 253, 0) 0%, rgba(2, 238, 253, 0.05) 50%, rgba(2, 238, 253, 0) 100%);
+
+border-image-source: linear-gradient(90deg, rgba(157, 157, 157, 0) 0%, rgba(152, 151, 151, 0.12) 50%, rgba(134, 133, 133, 0) 100%);
+
+
+ font-family:'Product Sans', sans-serif;
+}
+.services-btn{
+   height:40px;
+    padding:0 24px;
+     border-radius:9999px;
+     border: 1px solid #003BA4;
+}
+.services-card {
+    min-height: 465px;
+    border-radius: 8px;
+}
+
+
+.card {
+  width: 190px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+}
+
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 130px;
+  border-radius: 6px 6px 0 0;
+}
+
+
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.swiper {
+    width: 100%;
+    height: auto; /* 100% se auto karo */
+}
+
+.swiper-slide {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    /* Yahan background add karo */
+    background-color: #F8F8F8;
+}
+.dark .swiper-slide {
+    background-color: #06254E;
+}
+
+.dotted-line {
+    background-image: radial-gradient(circle, #00a3e0 1px, transparent 1px);
+    background-size: 10px 10px;
+    height: 1px;
+    width: 100%;
+  }
+  /* From Uiverse.io by alexmaracinaru */ 
+.card {
+  width: 432px;
+  background: white;
+ 
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+.input-field {
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    background: white;
+    transition: all 0.3s ease;
+}
+.input-field:focus {
+     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+/* Wrapper full width le */
+.iti {
+  width: 100%;
+}
+
+/* Input full width */
+.iti__tel-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px 12px 12px 0;
+  font-size: 14px;
+}
+
+/* Flag button styling */
+.iti__flag-container {
+  padding: 0 8px;
+}
+
+/* Dropdown styling */
+.iti__country-list {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  max-height: 220px;
+}
+
+/* Dark mode dropdown */
+.dark .iti__country-list {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+.dark .iti__country-list .iti__country:hover {
+  background-color: #374151;
+}
+.under-line {
+
+background: linear-gradient(90deg, #00F5FF 0%, #0072FF 50%, #00F2FF 100%);
+}
+.slider-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+}
+.business-btn{
+  writing-mode: vertical-rl;
+   transform: rotate(180deg); 
+   background:#00C6FF; 
+   color:#003BA4;
+    padding: 20px 14px; 
+   cursor:pointer;
+    font-weight:400; 
+   letter-spacing:1px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+}
+.saas-image{
+  background: linear-gradient(180deg, rgba(2, 238, 253, 0) 0%, rgba(0, 242, 255, 0.2) 100%);
+
+}
+  @keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    display: flex;
+    animation: marquee 20s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused; /* hover pe ruk jaye */
+  }
