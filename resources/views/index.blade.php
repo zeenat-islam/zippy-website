@@ -28,13 +28,12 @@
     Empower your business with smart digital solutions
   </h1>
 
-  <!-- Paragraph -->
-  <p  data-aos="fade-up" data-aos-delay="400" class="text-[14px] md:text-[16px] lg:text-[20px] 
-    w-[300px] md:w-[580px] lg:w-[894px] 
-    leading-[1.6] text-[#FFFFFFBF]">
-    Zippy helps startups and growing businesses build scalable web, mobile, 
-    and software solutions designed for speed, performance, and growth.
-  </p>
+ <p data-aos="fade-up" data-aos-delay="400" class="text-[14px] md:text-[16px] lg:text-[20px] 
+  w-full max-w-[300px] md:max-w-[580px] lg:max-w-[894px] 
+  leading-[1.6] text-[#FFFFFFBF]">
+  Zippy helps startups and growing businesses build scalable web, mobile, 
+  and software solutions designed for speed, performance, and growth.
+</p>
 
   <!-- Buttons -->
   <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -54,14 +53,15 @@
 
   </div>
 
-  <!-- Side Button -->
-  <div class="absolute z-50 top-1/2 -translate-y-1/2 right-0">
-    <button class="business-btn" onclick="scrollToContact()">
-      Lets Talk Business
-    </button>
-  </div>
+
 
 </section>
+<!-- Side Button -->
+<div class="business-wrapper">
+    <button class="business-btn" onclick="scrollToContact()">
+        Lets Talk Business
+    </button>
+</div>
 
 <div class="w-full overflow-hidden">
   <div class="marquee-track gap-12 py-10">
@@ -77,7 +77,7 @@
 
     @for ($i = 0; $i < 2; $i++)
       @foreach($logos as $logo)
-        <img src="{{ asset('Assests/images/' . $logo) }}"
+        <img loading="lazy" src="{{ asset('Assests/images/' . $logo) }}"
              class="object-contain h-10 lg:h-[60px] mx-6">
       @endforeach
     @endfor
@@ -103,8 +103,8 @@
                 </h1>
             </div>
 
-            <button id="toggleServicesBtn" onclick="toggleServices()" 
-            class="hidden  md:flex services-btn dark:text-white items-center gap-2 text-[#003BA4] text-sm font-medium flex-shrink-0">
+            <button  onclick="toggleServices()" 
+            class="hidden   md:flex services-btn dark:text-white items-center gap-2 text-[#003BA4] text-sm font-medium flex-shrink-0">
             View All Services
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
@@ -130,14 +130,27 @@
     />
 @endforeach
 </div>
+
+<div class="flex md:hidden justify-center items-center mt-8">
+      <button onclick="toggleServices()" class="flex services-btn items-center gap-2 text-[#003BA4] dark:text-white text-sm font-medium">
+ 
+     View All Services
+
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+            </svg>
+      </button>
+    </div>
 </section>
+
+
 
 
 <!-- Services Section End -->
 
 <!-- About Us Section -->
 <section class="w-full py-16 bg-white dark:bg-[#010F23] mt-10">
-    <div class="mx-auto px-6 max-w-[1349px]">
+    <div class="mx-auto lg:px-6 max-w-[1349px]">
         
         <div class="flex flex-col md:flex-row items-center gap-0" data-aos="fade-right">
 
@@ -154,9 +167,12 @@
                     Building apps that <br>empower businesses
                 </h1>
 
-                <p class="text-[14px] lg:text-[15px] w-[364px] leading-[1.7]  dark:text-gray-300 ">
-                    We are a dedicated team of mobile app developers, designers, and strategists committed to turning ideas into high-performance applications. With years of experience, we create scalable, secure, and user-friendly apps for startups, enterprises, and innovators worldwide.
-                </p>
+                <p class="text-[14px] lg:text-[15px] w-full max-w-[364px] leading-[1.7] dark:text-gray-300">
+                  We are a dedicated team of mobile app developers, designers, 
+                  and strategists committed to turning ideas into high-performance 
+                  applications. With years of experience, we create scalable, secure, and 
+                  user-friendly apps for startups, enterprises, and innovators worldwide.
+              </p>
 
                 <!-- Stats Row -->
                 <div class="flex items-center gap-8 mt-10">
@@ -164,7 +180,7 @@
                     <!-- Stat 1 -->
                     <div class="flex flex-col gap-2 items-center justify-center">
                         <div class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
-                            <img src="Assests/images/svg.svg" alt="Projects Icon" class="w-4 h-4">
+                            <img loading="lazy" src="Assests/images/svg.svg" alt="Projects Icon" class="w-4 h-4">
                         </div>
                         <span class="text-[24px] font-bold text-black dark:text-white flex items-center justify-center">200+</span>
                         <span class="text-[12px] text-gray-500">Projects Delivered</span>
@@ -231,7 +247,8 @@
           Stories of our transformations<br>across Services and Industries
         </h1>
       </div>
-      <button class="hidden md:flex dark:text-white services-btn items-center gap-2 text-[#003BA4] text-sm font-medium flex-shrink-0">
+      <button class="hidden md:flex 
+       services-btn items-center gap-2 text-[#003BA4] text-sm font-medium flex-shrink-0">
         <a class="flex gap-2" href="{{ url('blogs') }}">View All Blogs
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
@@ -267,8 +284,10 @@
 
     <!-- Mobile View All Button -->
     <div class="flex md:hidden justify-center items-center mt-8">
-      <button class="flex services-btn dark:text-white items-center gap-2 text-[#003BA4] text-sm font-medium">
-        <a href="{{ url('blogs') }}" class="text-[#003BA4] text-sm font-medium">View All Blogs</a>
+      <button class="flex services-btn items-center gap-2 text-[#003BA4] dark:text-white text-sm font-medium">
+  <a href="{{ url('blogs') }}" class="dark:text-white">
+    View All Blogs
+  </a>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
         </svg>

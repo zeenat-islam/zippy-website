@@ -1,14 +1,46 @@
 .btn-project {
-   background: linear-gradient(90deg, #00F2FF 0%, #0072FF 100%);
+    background: linear-gradient(90deg, #00F2FF 0%, #0072FF 100%);
+    background-size: 200% auto;
     color: white;
     padding: 10px 20px;
     border-radius: 50px;
     font-size: 14px;
-    transition: background-color 0.3s ease;
-    width:fit-content;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
+    border: 2px solid transparent;
+    animation: gradientShift 3s linear infinite;
+    transition: opacity 0.4s ease;
 }
+
+.btn-project:hover {
+    animation: none;
+    opacity: 0.7;
+    border: 2px solid #0072FF;
+    background: transparent;
+    color:#0072FF ;
+    transition: all 0.3s;
+}
+
+@keyframes flipIn {
+    from {
+        transform: rotateY(-90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+.view-project:hover{
+    color:#02c2cc;
+}
+.filter-btn:hover{
+   background-color: white; 
+
+}
+.dark .filter-btn:hover {
+    background-color: #06254E;
+}
+

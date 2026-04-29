@@ -28,6 +28,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('files', function () {
             return new \Illuminate\Filesystem\Filesystem;
         });
+         
+    // Yeh change karein
+    if (app()->environment('production') || request()->server('HTTP_X_FORWARDED_PROTO') === 'https') {
+        URL::forceScheme('https');
+    }
     }
 }
 

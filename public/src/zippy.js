@@ -3,26 +3,41 @@ function toggleTheme() {
     const toggle = document.getElementById('themeToggle');
     const sun = document.getElementById('sunIcon');
     const moon = document.getElementById('moonIcon');
-    const isLight = document.body.classList.contains('light');
+    const isLight = document.documentElement.classList.contains('light');
 
     if (isLight) {
+        document.documentElement.classList.replace('light', 'dark');
         document.body.classList.replace('light', 'dark');
         toggle.classList.remove('light');
         sun.classList.add('hidden');
         moon.classList.remove('hidden');
+        localStorage.setItem('theme', 'dark');
     } else {
+        document.documentElement.classList.replace('dark', 'light');
         document.body.classList.replace('dark', 'light');
         toggle.classList.add('light');
         sun.classList.remove('hidden');
         moon.classList.add('hidden');
+        localStorage.setItem('theme', 'light');
     }
 }
 
-// Default: light mode
-const toggle = document.getElementById('themeToggle'); 
-document.body.classList.add('light');
-toggle.classList.add('light');
+// Page load pe theme apply
+const toggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme') || 'light';
 
+document.documentElement.classList.add(savedTheme);
+document.body.classList.add(savedTheme);
+
+if (savedTheme === 'dark') {
+    toggle.classList.remove('light');
+    document.getElementById('sunIcon').classList.add('hidden');
+    document.getElementById('moonIcon').classList.remove('hidden');
+} else {
+    toggle.classList.add('light');
+    document.getElementById('sunIcon').classList.remove('hidden');
+    document.getElementById('moonIcon').classList.add('hidden');
+}
 function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     const h1 = document.getElementById('ham1');
@@ -133,31 +148,27 @@ function scrollToContact() {
 
 function toggleServices() {
     const extraCards = document.querySelectorAll('.extra-card');
-    const btn = document.getElementById('toggleServicesBtn');
+    const buttons = document.querySelectorAll('.services-btn');
     
     const isHidden = extraCards[0].classList.contains('hidden');
-    
+
+    // toggle cards
     extraCards.forEach(card => {
-        if (isHidden) {
-            card.classList.remove('hidden');
-        } else {
-            card.classList.add('hidden');
-        }
+        card.classList.toggle('hidden');
     });
 
-   
-
-    if (isHidden) {
-        btn.innerHTML = `View Less 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
-        </svg>`;
-    } else {
-        btn.innerHTML = `View All Services 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
-        </svg>`;
-    }
+    // update ALL buttons
+    buttons.forEach(btn => {
+        btn.innerHTML = isHidden
+            ? `View Less 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                </svg>`
+            : `View All Services 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                </svg>`;
+    });
 }
 
 

@@ -112,7 +112,7 @@
 
     <div data-purpose="input-group" class="flex flex-col gap-2 px-6">
         <label class="label-text text-black dark:text-white" for="details">Project Details *</label>
-        <textarea class="input-field resize-none dark:bg-[#06254E]" id="details" name="details" rows="6" required>{{ old('details') }}</textarea>
+        <textarea class="input-field resize-none dark:bg-[#06254E] text-black" id="details" name="details" rows="6" required>{{ old('details') }}</textarea>
         <span id="errorDetails" class="text-red-500 text-sm hidden mt-1">Details are required</span>
         @error('details') <span class="text-red-500 text-sm ">{{ $message }}</span> @enderror
     </div>

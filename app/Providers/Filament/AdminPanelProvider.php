@@ -24,22 +24,32 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
-             ->default()
+            ->default()
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Zippy')
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Orange,
             ])
-            ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\Filament\Admin\Resources')
-            ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\Filament\Admin\Pages')
+            ->discoverResources(
+                in: app_path('Filament/Admin/Resources'),
+                for: 'App\Filament\Admin\Resources'
+            )
+            ->discoverPages(
+                in: app_path('Filament/Admin/Pages'),
+                for: 'App\Filament\Admin\Pages'
+            )
             ->pages([
                 Dashboard::class,
             ])
-            ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\Filament\Admin\Widgets')
+            ->discoverWidgets(
+                in: app_path('Filament/Admin/Widgets'),
+                for: 'App\Filament\Admin\Widgets'
+            )
             ->widgets([
                 AccountWidget::class,
-                FilamentInfoWidget::class,
+                \App\Filament\Admin\Widgets\StatsOverviewWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -54,6 +64,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->renderHook(
+                'panels::head.end',
+                fn (): string => '<link rel="stylesheet" href="' . asset('css/filament-custom.css') . '">',
+            );
     }
 }

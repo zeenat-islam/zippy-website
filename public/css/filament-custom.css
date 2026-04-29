@@ -1,0 +1,74 @@
+/* Sidebar */
+.fi-sidebar {
+    background-color: #0f1117 !important;
+    border-right: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* Nav items */
+.fi-sidebar-item-button {
+    color: rgba(255,255,255,0.55) !important;
+    border-radius: 8px !important;
+}
+.fi-sidebar-item-button:hover {
+    background: rgba(255,255,255,0.07) !important;
+    color: #ffffff !important;
+}
+
+/* Active item — orange highlight */
+.fi-sidebar-item-button.fi-active,
+.fi-sidebar-item-button[aria-current="page"],
+nav a.fi-active,
+.fi-sidebar-nav-item.fi-active .fi-sidebar-item-button {
+    background: #ea580c !important;
+    color: #ffffff !important;
+}
+.fi-sidebar-item-button.fi-active .fi-sidebar-item-icon,
+.fi-sidebar-item-button[aria-current="page"] .fi-sidebar-item-icon {
+    color: #ffffff !important;
+}
+
+/* Brand name */
+.fi-brand-name {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+.fi-sidebar-header {
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* Topbar */
+.fi-topbar {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* Stats cards */
+.fi-wi-stats-overview-stat {
+    border-radius: 12px !important;
+    border: 1px solid #e5e7eb !important;
+    background: #ffffff !important;
+}
+.fi-wi-stats-overview-stat-value {
+    font-size: 26px !important;
+    font-weight: 500 !important;
+    color: #111827 !important;
+}
+.fi-wi-stats-overview-stat-label {
+    color: #6b7280 !important;
+    font-size: 13px !important;
+}
+
+/* Buttons */
+.fi-btn-primary {
+    background-color: #ea580c !important;
+    border-color: #ea580c !important;
+}
+.fi-btn-primary:hover {
+    background-color: #c2410c !important;
+}
+
+/* Main area */
+.fi-main {
+    background: #f9fafb !important;
+}

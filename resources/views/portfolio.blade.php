@@ -8,7 +8,7 @@
 @endpush
 
 @section('content')
-<section class="w-full  py-16 dark:bg-[#010F23]">
+<section class="w-full  py-16 dark:bg-[#010F23] bg-white">
     <div class="mx-auto px-4 sm:px-6 lg:px-12 max-w-[1348px]">
         
         <!-- Header -->
@@ -29,12 +29,12 @@
 </section>
 
 
-<section class="bg-[#E5E7EB]">
-    <div class=" dark:bg-[#010F23] pt-6 pb-8">
-        <div class=" flex justify-between dark:bg-[#06254E] bg-white lg:mx-20 mx-3 lg:p-10 p-4 rounded-lg ">
+<section class="bg-[#E5E7EB]" data-aos="zoom-in">
+    <div class=" dark:bg-[#010F23] bg-[#E5E7EB] pt-6 pb-8">
+        <div class=" flex justify-between dark:bg-[#06254E] bg-[#E5E7EB] bg-white lg:mx-20 mx-3 lg:p-10 p-4 rounded-lg ">
             <h1 class="">Filters</h1>
-            
-                <button id="filterToggleBtn" class="flex  dark:bg-[#010F23] gap-2 justify-center items-center border bg-[#E5E7EB] p-1 rounded-lg">
+                
+                <button id="filterToggleBtn" class="flex bg-[#E5E7EB] filter-btn dark:bg-[#010F23] gap-2 justify-center items-center border bg-[#E5E7EB] p-1 rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
                     </svg>
@@ -44,7 +44,7 @@
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="currentColor"
-                        class="size-3 transition-transform duration-300 dark:bg-[#010F23]">
+                        class="size-3 filter-btn transition-transform duration-300  ">
                         <path stroke-linecap="round"
                             stroke-linejoin="round"
                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -55,7 +55,7 @@
      </div>
 
 <div  id="filterContent" class="hidden  ">
-         <div class="bg-white lg:mx-20 mx-3 lg:p-10 p-4 border-t dark:bg-[#06254E] dark:border-none " >
+         <div class="bg-white lg:mx-20 mx-3 lg:p-10 p-4 border-t dark:bg-[#06254E] bg-[#E5E7EB]  dark:border-none " >
             <h1 class="text-[18px] font-bold dark:text-white ">Services</h1>
                 <div class="flex gap-2 flex-wrap">
     <button data-filter="service" data-value="ai-development" 
@@ -99,10 +99,10 @@
 
 <!--industries-->
 
-        <div class="bg-white lg:mx-20 mx-3 lg:p-10 p-4 border-t dark:bg-[#06254E] dark:border-none ">
+        <div class="bg-white lg:mx-20 mx-3 lg:p-10 p-4 border-t dark:bg-[#06254E] bg-[#E5E7EB]  dark:border-none ">
             <h1 class="text-[18px] font-bold dark:text-white ">Industries</h1>
                 <div class="flex gap-4 flex-wrap">
-                        <button data-filter="industry" data-value="healthcare" 
+                        <button data-filter="industry" data-value="real-estate" 
     class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center items-center border rounded-full border-gray-300 dark:border-none">
                             <a href="#">Healthcare</a>
                         </button>
@@ -148,29 +148,29 @@
         <div class="bg-white lg:mx-20 mx-3 lg:p-10 p-4 border-t dark:bg-[#06254E] dark:border-none  ">
             <h1 class="text-[18px] font-bold dark:text-white ">Project Type</h1>
                 <div class="flex gap-4 flex-wrap">
-                        <button  data-filter="project" data-value="mobile-apps" 
+                        <button  data-filter="project" data-value="mobile-app" 
     class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center items-center border rounded-full border-gray-300 dark:border-none">
-                            <a href="#">Mobile Apps</a>
+                            <a href="#">Mobile App</a>
                         </button>
 
                         <button data-filter="project" data-value="websites"  class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center items-center border rounded-full border-gray-300 dark:border-none">
-                            <a href="#">Websites</a>
+                            <a href="#">Website</a>
                         </button>
 
-                        <button data-filter="project" data-value="web-apps"  class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center items-center border rounded-full border-gray-300 dark:border-none">
-                            <a href="#">Web Apps</a>
+                        <button data-filter="project" data-value="web-app"  class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center items-center border rounded-full border-gray-300 dark:border-none">
+                            <a href="#">Web App</a>
                         </button>
 
-                        <button data-filter="project" data-value="dashboards"  class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center items-center border rounded-full border-gray-300 dark:border-none">
-                            <a href="#">Dashboards</a>
+                        <button data-filter="project" data-value="dashboard"  class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center items-center border rounded-full border-gray-300 dark:border-none">
+                            <a href="#">Dashboard</a>
                         </button>
 
                         <button data-filter="project" data-value="saas" class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center  items-center border rounded-full border-gray-300 dark:border-none">
-                            <a href="#">SaaS Platforms</a>
+                            <a href="#">SaaS Platform</a>
                         </button>
 
                         <button data-filter="project" data-value="admin" class="btn-service flex text-[14px] my-3 px-4 py-2 justify-center  items-center border rounded-full border-gray-300 dark:border-none">
-                            <a href="#">Admin Panels</a>
+                            <a href="#">Admin Panel</a>
                         </button>
                 </div>
                 
@@ -183,13 +183,18 @@
 
 
 
-<section class="mx-auto px-4 sm:px-6 lg:px-18 w-full py-16 dark:bg-[#010F23]">
+<section class="mx-auto px-4 sm:px-6 lg:px-18 w-full py-16 dark:bg-[#010F23] bg-[#E5E7EB] ">
 
  <!-- Cards grid: 1-col mobile, 2-col tablet, 3-col desktop -->
       <div class="grid lg:mx-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         @foreach($projects as $project)
-            <article class="{{ $loop->index >= 3 ? 'hidden' : '' }} bg-white dark:bg-[#06254E] rounded-xl overflow-hidden flex flex-col shadow-sm">
+            <article data-aos="flip-right"  data-service="{{ strtolower(str_replace(' ', '-', $project->category_1 ?? '')) }}"
+        data-industry="{{ strtolower(str_replace(' ', '-', $project->category_1 ?? '')) }}"
+        data-project="{{ strtolower(str_replace(' ', '-', $project->category_2 ?? '')) }}"
+            class="project-card {{ $loop->index >= 3 ? 'hidden' : '' }}
+            
+             bg-white dark:bg-[#06254E] rounded-xl overflow-hidden flex flex-col shadow-sm">
                 <img src="{{ asset('Assests/images/' . basename($project->image)) }}" alt="{{ $project->title }}" class="w-full h-[200px] object-cover">
                 
                 <div class="px-4 pb-5 flex flex-col gap-3 mt-4 flex-1">
@@ -207,7 +212,7 @@
                             <span class="text-sm dark:text-white">{{ $project->rating }}</span>
                         </div>
                         
-                        <a href="{{ $project->project_url ?? '#' }}" class="dark:text-[#00C6FF] text-[#003BA4] font-semibold text-[12px] flex items-center gap-1 hover:underline">
+                        <a href="{{ $project->project_url ?? '#' }}" class="dark:text-[#00C6FF] view-project text-[#003BA4] font-semibold text-[12px] flex items-center gap-1 hover:underline">
                             View Project
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3 transition-transform duration-300 ease-in-out hover:translate-x-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>

@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <a href="{{ route('servicesdetail', ['slug' => $slug]) }}" class="flex justify-between h-[54px] dark:bg-[#010F23] w-full items-center pt-1 bg-[#F8F8F8] border rounded-full px-4 py-3 hover:bg-gray-100 transition no-underline">
+        <a href="{{ route('servicesdetail', ['slug' => $slug]) }}" class=" detail-btn flex justify-between h-[54px] dark:bg-[#010F23] w-full items-center pt-1 bg-[#F8F8F8] border rounded-full px-4 py-3 hover:bg-gray-100 transition no-underline">
             <span class="text-[13px] text-gray-500 dark:text-white">View Details</span>
 
             <div class="w-[42px] h-[42px] mt-2 rounded-full dark:bg-[#00C6FF] bg-white flex items-center justify-center">

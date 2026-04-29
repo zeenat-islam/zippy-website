@@ -2,13 +2,13 @@
 
 namespace App\Mail;
 
-use Illuminate\Contracts\Queue\ShouldQueue;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use App\Models\ContactMessage;
 use Illuminate\Mail\Mailable;
 
-class ContactFormMail extends Mailable implements ShouldQueue
+class ContactFormMail extends Mailable 
 {
     use Queueable, SerializesModels;
 

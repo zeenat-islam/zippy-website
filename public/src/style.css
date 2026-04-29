@@ -45,8 +45,8 @@ body{
 }
 
 
-/* theme-toggle.css */
 .theme-toggle {
+    position: relative;
     width: 50px;
     height: 26px;
     background: #003BA4;
@@ -56,6 +56,7 @@ body{
     padding: 3px;
     cursor: pointer;
     transition: background 0.3s ease;
+    overflow: hidden;
 }
 
 .theme-toggle.light {
@@ -72,19 +73,75 @@ body{
     justify-content: center;
     transition: transform 0.3s ease;
     transform: translateX(0px);
+    z-index: 2;
+    flex-shrink: 0;
 }
 
 .theme-toggle.light .toggle-circle {
     transform: translateX(24px);
-    background:white;
+    background: white;
 }
 
 .toggle-icon {
     width: 12px;
     height: 12px;
+    stroke: white;
+    transition: stroke 0.3s ease;
+}
+
+.theme-toggle.light .toggle-icon {
+    stroke: #003BA4;
+}
+.marquee-track {
+    animation: marquee 50s linear infinite;
+}
+/* Stars - dark mode */
+.toggle-stars {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.star {
+    color: white;
+    font-size: 8px;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+.s1 { font-size: 9px; }
+.s2 { font-size: 5px; animation-delay: 0.3s; }
+.s3 { font-size: 7px; animation-delay: 0.6s; }
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to   { opacity: 1; }
 }
 
 
+nav li a {
+    position: relative;
+}
+
+nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00C6FF;
+    transition: width 0.3s ease;
+    border-radius: 9999px;
+}
+
+nav li a:hover::after {
+    width: 100%;
+}
 
 /* Dark Mode Colors */
 body.dark { 
@@ -118,7 +175,19 @@ body.light nav {
         mask-composite: exclude;
 }
 .started-button{
-  background:linear-gradient(to right,#00C6FF,#0072FF);width:156px;height:40px;border-radius:9999px;border:1px solid transparent;color:white;font-size:14px;font-weight:500
+  background:linear-gradient(to right,#00C6FF,#0072FF);
+  width:156px;
+  height:40px;
+  border-radius:9999px;border:1px solid transparent;
+  color:white;
+  font-size:14px;
+  font-weight:500;
+}
+.started-button:hover{
+  background:transparent;
+  color:#0072FF;
+  border:#003BA4;
+  border:1px solid;
 }
 .started-button2{
   background:linear-gradient(to right,#00C6FF,#0072FF);
@@ -130,12 +199,25 @@ body.light nav {
   font-size:14px;
   font-weight:500;
 }
+.started-button2:hover{
+  background:transparent;
+  color:#0072FF;
+  border:#003BA4;
+  border:1px solid;
+}
 .profile-button
 {
      width:226.44px;
     height:62px; 
     border-radius:9999px; 
      border:1px solid rgba(255,255,255,0.30);
+    }
+
+    .profile-button:hover{
+    background:transparent;
+  color:#0072FF;
+  border:#003BA4;
+  border:1px solid;
     }
 
 .rotate-button{
@@ -149,7 +231,12 @@ body.light nav {
         right: -83px;
         top: 324px;
 }
-
+.rotate-button:hover{
+ background:transparent;
+  color:#0072FF;
+  border:#003BA4;
+  border:1px solid;
+}
 .badge{
     color:#00C6FF;
     border: 1px solid;
@@ -166,9 +253,65 @@ border-image-source: linear-gradient(90deg, rgba(157, 157, 157, 0) 0%, rgba(152,
      border-radius:9999px;
      border: 1px solid #003BA4;
 }
+.dark .services-btn{
+  color:white;
+}
+.view-btn{
+    height:40px;
+    padding:0 24px;
+     border-radius:9999px;
+     border: 1px solid #003BA4;
+}
+.dark .view-btn{
+  color:white;
+}
 .services-card {
-    min-height: 465px;
+    min-height: 100%;
     border-radius: 8px;
+}
+#servicesGrid{
+    align-items: stretch;
+}
+.service-card a.detail-btn{
+    margin-top: auto;
+}
+.service-card > div{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.detail-btn{
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover background lift */
+.detail-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-color: #00C6FF;
+}
+
+/* arrow circle animation */
+.detail-btn div{
+  transition: all 0.3s ease;
+}
+
+/* hover pe icon circle pop */
+.detail-btn:hover div{
+  transform: scale(1.1);
+  background: #00C6FF;
+}
+
+/* svg arrow color change smooth */
+.detail-btn svg{
+  transition: all 0.3s ease;
+}
+
+.detail-btn:hover svg{
+  color: white;
 }
 
 
@@ -192,13 +335,34 @@ border-image-source: linear-gradient(90deg, rgba(157, 157, 157, 0) 0%, rgba(152,
   transform: scale(0.98);
 }
 
+.team-slider{
+  background-color: #F1F5F9;
+
+}
+.dark .team-slider{
+  background-color:#06254E;
+}
+
 .category {
   text-transform: uppercase;
   font-size: 0.7em;
   font-weight: 600;
   padding: 10px 7px 0;
-}
+}@media (max-width: 1023px) {
+    .team-slider {
+        flex-direction: column !important;
+        height: auto !important;
+    }
 
+    .team-slider > div:first-child {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .team-slider .absolute {
+        display: none !important;
+    }
+}
 .category:hover {
   cursor: pointer;
 }
@@ -320,16 +484,35 @@ background: linear-gradient(90deg, #00F5FF 0%, #0072FF 50%, #00F2FF 100%);
     line-height: 40px;
     letter-spacing: -0.5px;
 }
+.business-wrapper{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
 .business-btn{
   writing-mode: vertical-rl;
-   transform: rotate(180deg); 
-   background:#00C6FF; 
-   color:#003BA4;
-    padding: 20px 14px; 
-   cursor:pointer;
-    font-weight:400; 
-   letter-spacing:1px;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transform: rotate(180deg);
+
+  background:#00C6FF; 
+  color:#06254E;
+
+  padding: 20px 14px; 
+  cursor:pointer;
+  border: 2px solid #00C6FF;   
+  border-radius: 10px 10px 10px 10px; 
+  letter-spacing:1px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+
+.business-btn:hover{
+  background: transparent;     
+  color: #00C6FF;              
+  border: 2px solid #00C6FF;   
 }
 .saas-image{
   background: linear-gradient(180deg, rgba(2, 238, 253, 0) 0%, rgba(0, 242, 255, 0.2) 100%);

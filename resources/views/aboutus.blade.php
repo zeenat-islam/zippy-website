@@ -55,18 +55,14 @@ impactful digital products while creating long-term value for our
 clients and Partners.
   </p>
 
- 
-
-  <!-- Side Button -->
-  <div class="absolute z-50 top-1/2 -translate-y-1/2 right-0 dark:bg-[#010F23]">
-    <button class="business-btn text-[11px] md:text-[14px] lg:text-[22px] 
-      py-4 md:py-5 lg:py-6 px-2 md:px-3 dark:text-[#010F23]">
-      <a href="{{url('contact')}}">Lets Talk Business</a>
-    </button>
-  </div>
 
 </section>
-
+<!-- Side Button -->
+<div class="business-wrapper">
+    <button class="business-btn" onclick="scrollToContact()">
+        Lets Talk Business
+    </button>
+</div>
 
 <!-- About Us Section -->
 

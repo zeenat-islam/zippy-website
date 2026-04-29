@@ -53,16 +53,13 @@
   </p>
 
  
-
-  <!-- Side Button -->
-  <div class="absolute z-50 top-1/2 -translate-y-1/2 right-0 dark:bg-[#010F23]">
-    <button class="business-btn text-[11px] md:text-[14px] lg:text-[22px] 
-      py-4 md:py-5 lg:py-6 px-2 md:px-3 dark:text-[#010F23]" onclick="scrollToContact()">
-      Lets Talk Business
-    </button>
-  </div>
-
 </section>
+<!-- Side Button -->
+<div class="business-wrapper">
+    <button class="business-btn" onclick="scrollToContact()">
+        Lets Talk Business
+    </button>
+</div>
 
 <section class=" w-full  px-4 md:px-8 mt-20 bg-[#06254E] dark:bg-[#010F23] pb-10" data-purpose="contact-section">
   <!-- Header -->

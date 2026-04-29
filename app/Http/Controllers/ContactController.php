@@ -30,13 +30,9 @@ class ContactController extends Controller
             'message'     => $validated['details'],
         ]);
 
-        Mail::to('zeenatislam987a@gmail.com')->queue(new AdminContactMail($contact));
-        
-        // Hum Mailtrap use kar rahe hain, toh yahan aap apni email likh sakti hain
+     
        
-       
-    Mail::to($validated['email'])
-    ->later(now()->addSeconds(10), new ContactFormMail($contact));
+   Mail::to($validated['email'])->send(new ContactFormMail($contact));
 
         return back()->with('success', 'Message sent! We will contact you soon.');
     }

@@ -1,4 +1,7 @@
-
+function isDark() {
+    return document.body.classList.contains('dark') || 
+           document.documentElement.classList.contains('dark');
+}
 
 // BUTTON STATE FUNCTIONS
 
@@ -54,13 +57,18 @@ modeObserver.observe(document.body, { attributes: true, attributeFilter: ['class
 // ARTICLE FILTER FUNCTIONS
 
 function showAllArticles() {
-    document.querySelectorAll('article').forEach(card => {
+    document.querySelectorAll('.project-card').forEach(card => {
         card.style.display = 'flex';
+        card.classList.remove('hidden');
     });
 }
 
 function filterArticles(filterType, filterValue) {
-    document.querySelectorAll('article').forEach(card => {
+    const allCards = document.querySelectorAll('.project-card');
+    const matched = [];
+    const unmatched = [];
+
+    allCards.forEach(card => {
         let match = false;
 
         if (filterType === 'service') {
@@ -71,10 +79,34 @@ function filterArticles(filterType, filterValue) {
             match = card.dataset.project === filterValue;
         }
 
-        card.style.display = match ? 'flex' : 'none';
+        if (match) {
+            matched.push(card);
+        } else {
+            unmatched.push(card);
+        }
     });
-}
 
+    // Pehle sab hide karein
+    allCards.forEach(card => {
+        card.classList.add('hidden');
+        card.style.display = 'none';
+    });
+
+    // Matched show karein
+    matched.forEach(card => {
+        card.classList.remove('hidden');
+        card.style.display = 'flex';
+    });
+
+    // Agar matched 3 se kam hain toh unmatched se baki fill ho
+    const needed = 3 - matched.length;
+    if (needed > 0) {
+        unmatched.slice(0, needed).forEach(card => {
+            card.classList.remove('hidden');
+            card.style.display = 'flex';
+        });
+    }
+}
 
 
 // BTN-SERVICE CLICK HANDLER
@@ -93,14 +125,37 @@ document.querySelectorAll('.btn-service').forEach(btn => {
     });
 });
 
-document.getElementById('show-more-btn').addEventListener('click', function() {
-        // Saare cards dhoondein jin mein 'hidden' class hai
-        const hiddenCards = document.querySelectorAll('.project-card.hidden');
-        
-        hiddenCards.forEach(card => {
-            card.classList.remove('hidden'); // Unhein show kar dein
-        });
+let visibleCount = 3;
+const allCards = document.querySelectorAll('.project-card');
 
-        // Jab saare cards show ho jayen toh button ko gayab kar dein
-        this.style.display = 'none';
+document.getElementById('show-more-btn').addEventListener('click', function() {
+    let shown = 0;
+    
+    allCards.forEach((card, index) => {
+        if (index >= visibleCount && index < visibleCount + 3) {
+            card.classList.remove('hidden');
+            shown++;
+        }
     });
+    
+    visibleCount += 3;
+   
+    // Agar sab show ho gaye toh button hide karein
+    if (visibleCount >= allCards.length) {
+        this.style.display = 'none';
+    }
+
+});
+
+
+allCards.forEach((card, index) => {
+    if (index >= visibleCount && index < visibleCount + 3) {
+        card.classList.remove('hidden');
+        card.style.display = 'flex';
+        card.style.animation = 'none'; // reset
+        setTimeout(() => {
+            card.removeAttribute('data-aos');  // AOS hata dia
+            card.style.animation = 'flipIn 0.6s ease forwards';
+        }, 50);
+    }
+});

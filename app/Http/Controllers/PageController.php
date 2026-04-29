@@ -78,8 +78,10 @@ class PageController extends Controller
         // 'detail' relationship ko load karna lazmi hai
     $service = Service::with('detail')->where('slug', $slug)->firstOrFail();
     
-    $projects = Portfolio::all();
+    $projects = Portfolio::latest()->take(3)->get();
 
-    return view('servicesdetail', compact('service', 'projects'));
+      $blogs = Blog::latest()->take(3)->get();
+
+    return view('servicesdetail', compact('service', 'projects','blogs'));
     }
 }

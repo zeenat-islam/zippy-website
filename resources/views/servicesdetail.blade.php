@@ -7,7 +7,7 @@
 
 @section('content')
 
-<section class="hero-section relative z-0 flex flex-col px-3 md:px-6 pr-14 md:px-12 md:pr-16 lg:pl-[94px] lg:pr-20 gap-7 md:gap-9 lg:gap-[48px] justify-center min-h-screen overflow-hidden"
+<section  class="hero-section relative z-0 flex flex-col px-3 md:px-6 pr-14 md:px-12 md:pr-16 lg:pl-[94px] lg:pr-20 gap-7 md:gap-9 lg:gap-[48px] justify-center min-h-screen overflow-hidden"
     style="--hero-bg: url('{{ asset('Assests/images/' . $service->image) }}');">
     
     <button class="relative hero-button flex items-center justify-center gap-2 text-[10px] md:text-[12px] lg:text-sm cursor-pointer overflow-hidden text-[#02EEFD] self-start">
@@ -16,7 +16,7 @@
     </button>
 
     <h1 class="text-[26px] md:text-[36px] lg:text-[54px] font-[500] w-[300px] md:w-[560px] lg:w-[973px] leading-[1.19] tracking-[-0.03em] text-white mb-4 md:mb-0">
-        {{ $service->detail->hero_title ?? $service->title }}
+        {{ $service->detail->hero_title  }}
     </h1>
 
     <p class="text-[14px] md:text-[16px] lg:text-[20px] tracking-[-0.012em] w-[300px] md:w-[580px] lg:w-[894px] leading-[1.6] text-[#FFFFFFBF]">
@@ -32,12 +32,14 @@
         </a>
     </div>
 
-    <div class="absolute z-50 top-1/2 -translate-y-1/2 right-0 dark:bg-[#010F23]">
-        <a href="{{url('contact')}}" class="business-btn text-[11px] md:text-[14px] lg:text-[22px] py-4 md:py-5 lg:py-6 px-2 md:px-3 dark:text-[#010F23] inline-block">
-            Lets Talk Business
-        </a>
-    </div>
+   
 </section>
+<!-- Side Button -->
+<div class="business-wrapper">
+    <button class="business-btn" onclick="scrollToContact()">
+        Lets Talk Business
+    </button>
+</div>
 
 {{-- Dynamic Blocks Rendering --}}
 @if($service->detail && $service->detail->content_blocks)
@@ -45,7 +47,7 @@
         
         {{-- SECTION 1: SECTION SPLIT --}}
         @if($block['type'] === 'section_split')
-        <section class="w-full py-16 bg-white dark:bg-[#010F23]">
+        <section class="w-full py-16 bg-white dark:bg-[#010F23]" data-aos="fade-right">
             <div class="mx-auto px-6 max-w-[1348px] lg:px-12">
                 <div class="flex flex-col md:flex-row items-center gap-10 md:gap-8">
                     <div class="flex flex-col w-full md:w-1/2 lg:w-[607px] gap-6 lg:gap-[33px] md:pr-8">
@@ -92,18 +94,18 @@
     @endforeach
 @endif
 
-<section class="bg-[#06254E]">
+<section class="bg-[#06254E] " data-aos="fade-up">
     <x-workflow-section />
 </section>
 
 @if($service->detail && $service->detail->content_blocks)
     @foreach($service->detail->content_blocks as $block)
         @if($block['type'] === 'section_grid')
-            <section class="w-full py-16 bg-[#E5E7EB] dark:bg-[#010F23]">
-                <div class="mx-auto px-4 sm:px-6 lg:mx-12 max-w-[1348px]">
+            <section data-aos="fade-up" class="w-full py-16 bg-[#E5E7EB] dark:bg-[#010F23]">
+                <div  class="mx-auto px-4 sm:px-6 lg:mx-12 max-w-[1348px]">
 
                     {{-- Top: heading --}}
-                    <div class="flex flex-col gap-4 mb-8">
+                    <div  class="flex flex-col gap-4 mb-8">
                         <button class="self-start uppercase badge text-[12px] font-[600] leading-[1.6] tracking-[-0.012em] px-4 py-1 cursor-pointer">
                             Our Services
                         </button>
@@ -139,7 +141,7 @@
                                     {{-- Yahan icons array use ho raha hai --}}
                                     <img src="{{ asset('Assests/images/' . ($icons[$index] ?? 'Vector (9).svg')) }}" alt="Icon" class="w-4 h-4">
                                 </div>
-                                <h2 class="text-[15px] font-semibold dark:text-white">
+                                <h2 class="text-[15px] font-semibold dark:text-white text-black">
                                     {{ $item['title'] ?? 'No Title' }}
                                 </h2>
                                 <p class="text-[13px] dark:text-[#94A3B8] text-gray-500">
@@ -151,7 +153,7 @@
                     </div>
 
                     {{-- DESKTOP: original 3-col layout --}}
-                    <div class="hidden lg:flex items-center gap-0 mt-10">
+                    <div   class="hidden lg:flex items-center gap-0 mt-10">
 
                         {{-- Left cards (0 and 1) --}}
                         <div class="flex flex-col gap-8">
@@ -162,7 +164,7 @@
                                     <div class="w-9 h-9 rounded-full border flex justify-center items-center {{ $idx == 1 ? 'bg-[#00C6FF1A]' : '' }}">
                                         <img src="{{ asset('Assests/images/' . ($icons[$idx] ?? 'Vector (9).svg')) }}" alt="Icon" class="w-4 h-4">
                                     </div>
-                                    <h2 class="text-[18px] dark:text-white">{{ $item['title'] ?? 'No Title' }}</h2>
+                                    <h2 class="text-[18px] dark:text-white text-black">{{ $item['title'] ?? 'No Title' }}</h2>
                                     <p class="dark:text-[#94A3B8]">{{ $item['desc'] ?? '' }}</p>
                                 </div>
                                 @endif
@@ -187,7 +189,7 @@
                                     <div class="w-9 h-9 rounded-full border flex justify-center items-center">
                                         <img src="{{ asset('Assests/images/' . ($icons[$idx] ?? 'Vector (11).svg')) }}" alt="Icon" class="w-4 h-4">
                                     </div>
-                                    <h2 class="text-[18px] dark:text-white">{{ $item['title'] ?? 'No Title' }}</h2>
+                                    <h2 class="text-[18px] dark:text-white text-black">{{ $item['title'] ?? 'No Title' }}</h2>
                                     <p class="dark:text-[#94A3B8]">{{ $item['desc'] ?? '' }}</p>
                                 </div>
                                 @endif
@@ -217,7 +219,7 @@
             </div>
 
             <!-- View All button: hidden on mobile, shown on md+ -->
-            <a href="{{url('portfolio')}}" class="hidden md:flex services-btn dark:text-white items-center gap-2 text-[#003BA4] text-sm font-medium flex-shrink-0">
+            <a href="{{url('portfolio')}}" class="hidden md:flex view-btn dark:text-white items-center gap-2 text-[#003BA4] text-sm font-medium flex-shrink-0">
                 View All
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
@@ -227,10 +229,11 @@
 
 
         <!-- Cards grid: 1-col mobile, 2-col tablet, 3-col desktop -->
-      <div class="grid lg:mx-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid lg:mx-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
 
         @foreach($projects as $project)
-            <article class="bg-white dark:bg-[#06254E] rounded-xl overflow-hidden flex flex-col shadow-sm">
+            <article data-aos="flip-left"   data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="bg-white dark:bg-[#06254E] rounded-xl overflow-hidden flex flex-col shadow-sm">
                 <img src="{{ asset('Assests/images/' . $project->image) }}" alt="{{ $project->title }}" class="w-full h-[200px] object-cover">
                 
                 <div class="px-4 pb-5 flex flex-col gap-3 mt-4 flex-1">
@@ -263,8 +266,8 @@
 
         <!-- View All button: visible only on mobile, centered below cards -->
         <div class="flex justify-center mt-8 md:hidden">
-            <a href="portfolio.html" class="flex items-center gap-2 border border-[#003BA4] text-[#003BA4] dark:text-white dark:border-white px-6 py-2 rounded-full text-sm font-medium">
-                View All Services
+            <a href="{{url('portfolio')}}" class="flex view-btn items-center gap-2 border border-[#003BA4] text-[#003BA4] dark:text-white dark:border-white px-6 py-2 rounded-full text-sm font-medium">
+                View All 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
                 </svg>
@@ -300,77 +303,31 @@
       </button>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[21px] mt-10 w-full mx-auto px-6">
-      <!-- Card 1 -->
-      <article class="bg-white overflow-hidden flex flex-col shadow-sm rounded-t-md dark:bg-[#06254E] dark:border-none" >
-        <div>
-          <img src="Assests/images/img (3).png" alt="Blog" class="w-full  h-[180px] object-cover">
-        </div>
-        <div class="px-3 pb-4 flex flex-col gap-3 mt-4">
-          <div class="flex items-center gap-2"
-            <span class="text-gray-400 text-[11px] dark:text-white">March 12, 2024</span>
-            <span class="text-gray-300 text-[11px] dark:text-white">•</span>
-            <span class="text-gray-400 text-[11px] dark:text-white">4 min read</span>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[21px] mt-10 w-full" data-aos="fade-up">
+      @foreach($blogs as $blog)
+      <article data-aos="flip-left"   data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="bg-white overflow-hidden flex flex-col shadow-sm rounded-t-md dark:bg-[#06254E] dark:border-none">
+          <div>
+              <img src="{{ asset('Assests/images/' . $blog->image) }}" alt="{{ $blog->title }}" class="w-full h-[180px] object-cover">
           </div>
-          <h3 class="text-[20px] font-bold text-black dark:text-white">
-            How Financial Planning Supports Business Growth
-          </h3>
-          <a href="#" class="text-[#00C6FF] font-semibold text-[12px] flex items-center gap-1 hover:underline">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
-            </svg>
-          </a>
-        </div>
-      </article>
-      <!-- Card 2 -->
-      <article class="bg-white rounded-xl overflow-hidden dark:bg-[#06254E] dark:border-none flex flex-wrap flex-col shadow-sm">
-        <div>
-          <img src="Assests/images/img (3).png" alt="Blog" class="w-full h-[180px] object-cover">
-        </div>
-        <div class="px-3 pb-4 flex flex-col gap-3 mt-4">
-          <div class="flex items-center gap-2">
-            <span class="text-gray-400 text-[11px] dark:text-white">March 12, 2024</span>
-            <span class="text-gray-300 text-[11px] dark:text-white">•</span>
-            <span class="text-gray-400 text-[11px] dark:text-white">4 min read</span>
+          <div class="px-3 pb-4 flex flex-col gap-3 mt-4">
+              <div class="flex items-center gap-2">
+                  <span class="text-gray-400 text-[11px] dark:text-white">{{ $blog->date }}</span>
+                  <span class="text-gray-300 text-[11px] dark:text-white">•</span>
+                  <span class="text-gray-400 text-[11px] dark:text-white">{{ $blog->read_time }}</span>
+              </div>
+              <h3 class="text-[20px] font-bold text-black dark:text-white">{{ $blog->title }}</h3>
+              <a href="{{ url('/blogs/' . $blog->slug) }}" class="text-[#00C6FF] font-semibold text-[12px] flex items-center gap-1 hover:underline">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                  </svg>
+              </a>
           </div>
-          <h2 class="text-[20px] font-bold text-black dark:text-white">
-            How Financial Planning Supports Business Growth
-          </h2>
-          <a href="#" class="text-[#00C6FF] font-semibold text-[12px] flex items-center gap-1 hover:underline">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
-            </svg>
-          </a>
-        </div>
       </article>
-
-     
-      <!-- Card 3 -->
-      <article class="bg-white dark:bg-[#06254E] dark:border-none rounded-xl overflow-hidden flex flex-col flex-wrap shadow-sm">
-        <div>
-          <img src="Assests/images/img (3).png" alt="Blog" class="w-full h-[180px] object-cover">
-        </div>
-        <div class="px-3 pb-4 flex flex-col gap-3 mt-4">
-          <div class="flex items-center gap-2"> 
-            <span class="text-gray-400 text-[11px] dark:text-white">March 12, 2024</span>
-            <span class="text-gray-300 text-[11px] dark:text-white">•</span>
-            <span class="text-gray-400 text-[11px] dark:text-white">4 min read</span>
-          </div>
-          <h2 class="text-[20px] font-bold text-black  dark:text-white">
-            How Financial Planning Supports Business Growth
-          </h2>
-          <a href="#" class="text-[#00C6FF] font-semibold text-[12px] flex items-center gap-1 hover:underline">
-            Learn More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
-            </svg>
-          </a>
-        </div>
-      </article>
-
+      @endforeach
     </div>
+
 
 <div class="flex md:hidden justify-start mt-4 justify-center  items-center mt-8">
     <button class="flex services-btn dark:text-white items-center gap-2 text-[#003BA4] text-sm font-medium">
