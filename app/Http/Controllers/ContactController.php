@@ -34,7 +34,9 @@ class ContactController extends Controller
        
    Mail::to($validated['email'])->send(new ContactFormMail($contact));
 
-        return back()->with('success', 'Message sent! We will contact you soon.');
+   Mail::to('zeenatislam987a@gmail.com')->send(new AdminContactMail($contact));
+
+return back()->with('success', 'Message sent! We will contact you soon.');
     }
 
     

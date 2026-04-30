@@ -1,6 +1,7 @@
-<footer class="dark:bg-[#010F23] bg-white" >
-    <div  class="w-full dark:bg-[#010F23] py-6 bg-white mt-10 lg:px-20 px-6 flex-col lg:flex-row flex justify-between items-center">
+<footer class="dark:bg-[#010F23] bg-white">
+    <div class="w-full dark:bg-[#010F23] py-6 bg-white mt-10 lg:px-20 px-6 flex-col lg:flex-row flex justify-between items-center">
 
+        <!-- Logo + Description + Social -->
         <div class="lg:w-[268px]">
             <img src="{{ asset('Assests/images/zippy logo (1) 1.png') }}" alt="Zippy Logo"/>
             <p class="pt-8 text-[#94A3B8]">Empowering businesses with innovative, scalable, and high-performance digital solutions.</p>
@@ -14,6 +15,7 @@
             </div>
         </div>
 
+        <!-- Quick Links — bilkul same -->
         <div class="flex-col flex self-start lg:items-center lg:w-[268px]">
             <h2 class="text-[18px] pb-4 dark:text-white">Quick Links</h2>
             <ul class="flex flex-col gap-2">
@@ -24,27 +26,57 @@
             </ul>
         </div>
 
-          <div class="flex-col flex gap-5 w-[268px] pb-8 self-start lg:items-center">
-    <h2 class="text-[18px] dark:text-white lg:mt-0 mt-4"> Quick Links</h2>
-    <ul class="flex flex-col gap-6">
+        <!-- What We Do + What We Are with dropdowns -->
+        <div class="flex-col flex gap-5 w-[268px] pb-8 self-start lg:items-center">
+            <h2 class="text-[18px] dark:text-white lg:mt-0 mt-4">Quick Links</h2>
+            <ul class="flex flex-col gap-6">
 
-     <li class="flex items-center gap-2">
-  <a href="{{url('/')}}" class="flex items-center gap-1 text-[#94A3B8] text-[14px] hover:underline">
-    What We Do
-   
-  </a>
-</li>
-      <li class="flex items-center gap-2 ">
-  <a href="{{url('/')}}" class="flex items-center gap-1 text-[#94A3B8] text-[14px] hover:underline">
-    What We Are
-    </a>
-</li>
+                <!-- What We Do -->
+                <li class="flex flex-col gap-2">
+                    <button onclick="toggleFooterSection('footer-whatwedo')"
+                        class="flex items-center gap-1 text-[#94A3B8] text-[14px] hover:underline cursor-pointer">
+                        What We Do
+                        <svg id="footer-whatwedo-arrow" class="size-3 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                        </svg>
+                    </button>
+                    <ul id="footer-whatwedo" class="hidden flex-col gap-2 pl-3">
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'web-development']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Web Development</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'mobile-app-development']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• App Development</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'saas-web-development']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Custom Software Development</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'uiux-design']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• UX/UI Design</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'ai-automation']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Gen AI</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'data-analytics-insights']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Data Analytics</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'quality-assurance']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Quality Assurance</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'blockchain-crypto-development']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Blockchain & Cryptography</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'game-development']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Game Development</a></li>
+                        <li><a href="{{ route('servicesdetail', ['slug' => 'cloud-application']) }}" class="text-[#94A3B8] text-[13px] hover:underline">• Cloud Application</a></li>
+                    </ul>
+                </li>
 
-    <li><a href="{{url('blogs')}}" class="text-[#94A3B8] text-[14px] hover:underline">Blogs</a></li>
-      <li><a href="{{url('contact')}}" class="text-[#94A3B8] text-[14px] hover:underline">Join Zippy</a></li>
-    </ul>
-  </div>
+                <!-- What We Are -->
+                <li class="flex flex-col gap-2">
+                    <button onclick="toggleFooterSection('footer-whatweare')"
+                        class="flex items-center gap-1 text-[#94A3B8] text-[14px] hover:underline cursor-pointer">
+                        What We Are
+                        <svg id="footer-whatweare-arrow" class="size-3 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                        </svg>
+                    </button>
+                    <ul id="footer-whatweare" class="hidden flex-col gap-2 pl-3">
+                        <li><a href="{{ url('aboutus') }}" class="text-[#94A3B8] text-[13px] hover:underline">• About</a></li>
+                        <li><a href="{{ url('team') }}" class="text-[#94A3B8] text-[13px] hover:underline">• Our Team</a></li>
+                        <li><a href="{{ url('geographics') }}" class="text-[#94A3B8] text-[13px] hover:underline">• Geographics</a></li>
+                    </ul>
+                </li>
 
+                <li><a href="{{ url('blogs') }}" class="text-[#94A3B8] text-[14px] hover:underline">Blogs</a></li>
+                <li><a href="{{ url('contact') }}" class="text-[#94A3B8] text-[14px] hover:underline">Join Zippy</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Contact Us — bilkul same -->
         <div class="flex flex-col gap-2 lg:w-[268px] self-start">
             <h2 class="pb-3 dark:text-white">Contact Us</h2>
             <div class="flex items-center gap-4">
@@ -71,13 +103,32 @@
                 <p class="text-[#94A3B8] text-[13px]">DHA-II, Islamabad, Near Giga Mall</p>
             </div>
         </div>
+
     </div>
 
-    <div class="bg-[#06254E]  text-white flex items-center gap-2 justify-between flex-wrap mx-5 lg:mx-20 border rounded-2xl py-3 mb-4 px-6">
+    <!-- Bottom bar — bilkul same -->
+    <div class="bg-[#06254E] text-white flex items-center gap-2 justify-between flex-wrap mx-5 lg:mx-20 border rounded-2xl py-3 mb-4 px-6">
         <p class="text-[14px]">© 2026 Zippy Ecom Solutions. All Rights Reserved.</p>
         <div>
             <a href="#" class="text-[14px] hover:underline ml-4">Privacy Policy</a>
             <a href="#" class="text-[14px] hover:underline ml-4 border-l border-white pl-4">Terms & Conditions</a>
         </div>
     </div>
+
+    <script>
+    function toggleFooterSection(id) {
+        const section = document.getElementById(id);
+        const arrow = document.getElementById(id + '-arrow');
+        if (section.classList.contains('hidden')) {
+            section.classList.remove('hidden');
+            section.classList.add('flex');
+            if (arrow) arrow.style.transform = 'rotate(180deg)';
+        } else {
+            section.classList.add('hidden');
+            section.classList.remove('flex');
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
+        }
+    }
+    </script>
+
 </footer>

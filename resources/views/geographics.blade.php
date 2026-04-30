@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'geographics — Zippy Solutions')
 
-
+@section('description', 'Explore our geographics.')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('src/geographic.css') }}">
@@ -44,16 +44,14 @@
    Our global presence allows us to collaborate with businesses from different regions and industries. With teams and partners across major international markets, we deliver innovative technology solutions while understanding the unique needs of each geography.
 
  
-
-  <!-- Side Button -->
-  <div class="absolute z-50 top-1/2 -translate-y-1/2 right-0 dark:bg-[#010F23]">
-    <button class="business-btn text-[11px] md:text-[14px] lg:text-[22px] 
-      py-4 md:py-5 lg:py-6 px-2 md:px-3 dark:text-[#010F23]">
-      Lets Talk Business
-    </button>
-  </div>
-
 </section>
+
+<!-- Side Button -->
+<div class="business-wrapper">
+    <button class="business-btn" onclick="scrollToContact()">
+        Lets Talk Business
+    </button>
+</div>
 
 <section>
      <div class="w-full px-4  mt-20" data-purpose="geographics-section">
@@ -66,7 +64,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src=""
+          src="{{ asset('/Assests/images/christoph-schulz-7tb-b37yHx4-unsplash.jpg') }}"
           alt="Dubai"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -82,7 +80,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&q=75"
+          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg) }}"
           alt="London"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -98,7 +96,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1517090504586-fde19ea6066f?w=600&q=75"
+          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg) }}"
           alt="Toronto"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -114,7 +112,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=600&q=75"
+          src="{{ asset('/Assests/images/anthony-delanoix-hv5pLutRkCI-unsplash.jpg) }}"
           alt="New York"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -136,7 +134,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src=""
+          src="{{ asset('/Assests/images/christoph-schulz-7tb-b37yHx4-unsplash.jpg') }}"
           alt="Dubai"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -152,7 +150,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&q=75"
+          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg) }}"
           alt="London"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -168,7 +166,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1517090504586-fde19ea6066f?w=600&q=75"
+         src="{{ asset('/Assests/images/mwangi-gatheca-qlKaN7eqay8-unsplash.jpg) }}"
           alt="Toronto"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -184,7 +182,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl hidden sm:flex">
         <img
-          src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=600&q=75"
+          src="{{ asset('/Assests/images/anthony-delanoix-hv5pLutRkCI-unsplash.jpg) }}"
           alt="New York"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -197,17 +195,7 @@
  
     </div>
  
- 
-    <!-- View All Button -->
-    <div class="flex justify-center mt-6 lg:hidden ">
-      <button class="flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#003BA4]
-                     text-[#003BA4] text-[13px] font-500  
-                     hover:border-gray-400 hover:shadow-sm
-                     transition-all duration-300 ease-out dark:[#00F2FF] dark:text-white">
-        View All
-        <span class="text-base leading-none">→</span>
-      </button>
-    </div>
+
  
   </div>
 </section>

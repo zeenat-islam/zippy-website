@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('title', 'Home — Zippy Solutions')
-
+@section('description', 'Zippy helps startups and growing businesses build scalable web, mobile, and software solutions.')
 @section('content')
 
 <!-- Hero Section -->
@@ -163,11 +163,12 @@
                 
                 </button>
 
-                <h1 class="text-[20px] md:text-[38px] lg:text-[48px] lg:font-[700] lg:leading-[48px] tracking-[-0.5px] text-black dark:text-white">
+                <h1 class="text-[20px] md:text-[38px] px-4 lg:px-0 lg:text-[48px] lg:font-[700]  lg:leading-[48px] tracking-[-0.5px] text-black dark:text-white">
                     Building apps that <br>empower businesses
                 </h1>
 
-                <p class="text-[14px] lg:text-[15px] w-full max-w-[364px] leading-[1.7] dark:text-gray-300">
+               <p class="text-[14px] lg:text-[15px] w-full max-w-[364px] 
+               leading-[1.7] dark:text-gray-300 px-4 lg:px-0">
                   We are a dedicated team of mobile app developers, designers, 
                   and strategists committed to turning ideas into high-performance 
                   applications. With years of experience, we create scalable, secure, and 
@@ -175,12 +176,12 @@
               </p>
 
                 <!-- Stats Row -->
-                <div class="flex items-center gap-8 mt-10">
+                <div class="flex items-center gap-8 mt-10 px-4 lg:px-0 ">
                     
                     <!-- Stat 1 -->
                     <div class="flex flex-col gap-2 items-center justify-center">
                         <div class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
-                            <img loading="lazy" src="Assests/images/svg.svg" alt="Projects Icon" class="w-4 h-4">
+                            <img loading="lazy" src="{{ asset('Assests/images/svg.svg') }}" alt="Projects Icon" class="w-4 h-4">
                         </div>
                         <span class="text-[24px] font-bold text-black dark:text-white flex items-center justify-center">200+</span>
                         <span class="text-[12px] text-gray-500">Projects Delivered</span>
@@ -192,9 +193,9 @@
                     <!-- Stat 2 -->
                     <div class="flex flex-col items-center justify-center gap-2">
                         <div class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
-                            <img src="Assests/images/svg (2).svg" alt="Customers Icon" class="w-4 h-4">
+                            <img src="{{ asset('Assests/images/svg (2).svg') }}" alt="Customers Icon" class="w-4 h-4">
                         </div>
-                        <span class="text-[24px] font-bold text-black dark:text-white flex items-center justify-center">40%</span>
+                        <span class="text-[24px] font-bold text-black dark:text-white flex items-center justify-center">85%</span>
                         <span class="text-[12px] text-gray-500">Satisfied customers</span>
                     </div>
 
@@ -204,7 +205,7 @@
                     <!-- Stat 3 -->
                     <div class="flex flex-col  items-center justify-center gap-2">
                     <div data-aos="zoom-in" class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
-                        <img src="Assests/images/Vector.svg" alt="Experience Icon" class="w-4 h-4">
+                        <img src="{{ asset('Assests/images/Vector.svg') }}" alt="Experience Icon" class="w-4 h-4">
                     </div>
                         <span class="text-[24px] flex items-center justify-center font-bold text-black dark:text-white">8+</span>
                         <span class="text-[12px] text-gray-500">years Experience</span>
@@ -217,7 +218,7 @@
             <!-- Right Side: Image -->
             <div class="w-full md:flex-1 mt-10 md:mt-0">
                 <img 
-                    src="Assests/images/img (2).png" 
+                    src="{{ asset('Assests/images/img (2).png') }}"
                     alt="About Us" 
                     class="w-full h-[300px] md:h-[584px] object-cover rounded-lg">
             </div>
@@ -301,6 +302,7 @@
 
 <!---testimonials-->
 
+
 <section class="max-w-7xl mx-auto  relative px-6 md:px-10 mb-10 " id="testimonials"  data-aos="fade-right">
   <!-- Section Header -->
   <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 mt-10">
@@ -322,7 +324,7 @@
 
   <div class="flex items-center justify-between lg:pr-6">
       
-      <h2 class="lg:text-[48px]  text-[20px] dark:text-white lg:leading-[48px] lg:mt-5 tracking-[0.5px] font-bold" style="font-family: 'Product Sans', sans-serif;">
+      <h2 class="lg:text-[48px] text-black text-[20px] dark:text-white lg:leading-[48px] lg:mt-5 tracking-[0.5px] font-bold" style="font-family: 'Product Sans', sans-serif;">
         What Our Clients Say
       </h2>
       <div class="flex gap-3">

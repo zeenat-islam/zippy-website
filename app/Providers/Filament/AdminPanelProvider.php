@@ -29,6 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Zippy')
+            ->darkMode(false)
             ->colors([
                 'primary' => Color::Orange,
             ])

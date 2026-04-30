@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'About Us — Zippy Solutions')
-
+@section('description', 'We are a dedicated team of 
+developers committed to turning ideas into high-performance applications.')
 @push('styles')
 <link rel="stylesheet" href="{{ asset('src/Aboutus.css') }}">
 @endpush

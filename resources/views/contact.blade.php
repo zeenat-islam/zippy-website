@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Us — Zippy Solutions')
-
+@section('description', 'Get in touch with Zippy Solutions for your next digital project.')
 @push('styles')
 <link rel="stylesheet" href="{{ asset('src/contact.css') }}">
 @endpush

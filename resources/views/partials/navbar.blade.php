@@ -5,7 +5,7 @@
     </a>
 
     {{-- Desktop Nav --}}
-    <ul class="hidden md:flex items-center gap-8 text-sm font-medium" style="color:#94A3BB">
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium " style="color:#94A3BB">
 
         <li class="relative flex items-center gap-2 cursor-pointer" onclick="toggleWhatWeDo()">
             What We Do
@@ -14,7 +14,7 @@
             </svg>
             <div id="whatWeDoDropdown" class="absolute hidden bg-white rounded-2xl shadow-xl z-50 w-[804px] top-[40px]
              left-[-94px] p-[40px] overflow-y-auto" style="max-height: 80vh;">
-                <div class="flex gap-[26px]">
+                <div class="flex gap-[26px] ">
                     <div class="flex flex-col w-[368px] gap-[56px] ">
                         <p class="text-black font-bold text-[40px]">Capabilities</p>
                         <div class="flex flex-col w-[330px] gap-[20px]">
@@ -138,7 +138,7 @@
         </button>
 
         {{-- Mobile Dropdown - SIRF YAHAN CHANGE HUA --}}
-        <div id="mobileMenu" class="hidden absolute bg-white shadow-md rounded-lg p-4 z-50" style="width:260px; top:36px; right:0; max-height:80vh; overflow-y:auto;">
+        <div id="mobileMenu" class="hidden dark:bg-[#010f23] absolute bg-white shadow-md rounded-lg p-4 z-50" style="width:260px; top:36px; right:0; max-height:80vh; overflow-y:auto;">
             <ul class="flex flex-col text-sm font-medium" style="gap:4px; color:#94A3BB">
 
                 {{-- What We Do --}}

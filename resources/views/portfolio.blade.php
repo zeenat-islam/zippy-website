@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Portfolio — Zippy Solutions')
 
-
+@section('description', 'Explore our portfolio of web, mobile, and software projects.')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('src/portfolio.css') }}">

@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Swiper 2 (testimonials wala)
 const swiper2 = new Swiper(".myswiper", {
-    slidesPerView: 1.5,
+    slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
     navigation: {
@@ -201,7 +201,7 @@ const swiper2 = new Swiper(".myswiper", {
         prevEl: "#testimonialPrev",
     },
     breakpoints: {
-        640: { slidesPerView: 2 },
+        640: { slidesPerView: 1 },
         1024: { slidesPerView: 3 },
     }
 });
@@ -335,3 +335,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 });
+

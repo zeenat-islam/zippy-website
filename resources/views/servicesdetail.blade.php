@@ -36,8 +36,8 @@
 </section>
 <!-- Side Button -->
 <div class="business-wrapper">
-    <button class="business-btn" onclick="scrollToContact()">
-        Lets Talk Business
+    <button class="business-btn">
+        <a href="{{url('contact')}}">Lets Talk Business</a>
     </button>
 </div>
 

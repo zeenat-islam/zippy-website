@@ -66,8 +66,8 @@
 </section>
 <!-- Side Button -->
 <div class="business-wrapper">
-    <button class="business-btn" onclick="scrollToContact()">
-        Lets Talk Business
+    <button class="business-btn">
+       <a href="{{url('contact')}}"> Lets Talk Business</a>
     </button>
 </div>
 
@@ -138,7 +138,7 @@
 
     </div>
 
-        {{-- 🔀 Image & Text --}}
+        {{--  Image & Text --}}
         @elseif($type == 'image-text-block')
             @php $layout = $data['type'] ?? 'text-right'; @endphp
 

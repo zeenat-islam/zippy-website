@@ -38,8 +38,8 @@
         </div>
 
         <div data-purpose="input-group" class="flex flex-col gap-4 mt-10 px-6">
-            <label class="label-text text-black dark:text-white" for="email">Email Address *</label>
-            <input class="input-field dark:bg-[#06254E] dark:placeholder:text-gray-400 @error('email') border-red-500 @enderror"
+            <label class="label-text text-black dark:text-white " for="email">Email Address *</label>
+            <input class="input-field dark:bg-[#06254E] text-black dark:placeholder:text-gray-400 @error('email') border-red-500 @enderror"
                 id="email" name="email" placeholder="your@email.com" type="email" value="{{ old('email') }}" required />
             <span id="errorEmail" class="text-red-500 text-sm hidden mt-1">Please enter a valid email</span>
             @error('email')
@@ -112,7 +112,7 @@
 
     <div data-purpose="input-group" class="flex flex-col gap-2 px-6">
         <label class="label-text text-black dark:text-white" for="details">Project Details *</label>
-        <textarea class="input-field resize-none dark:bg-[#06254E] text-black" id="details" name="details" rows="6" required>{{ old('details') }}</textarea>
+        <textarea class="input-field resize-none dark:bg-[#06254E] dark:text-white text-black" id="details" name="details" rows="6" required>{{ old('details') }}</textarea>
         <span id="errorDetails" class="text-red-500 text-sm hidden mt-1">Details are required</span>
         @error('details') <span class="text-red-500 text-sm ">{{ $message }}</span> @enderror
     </div>

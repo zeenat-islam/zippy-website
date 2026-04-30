@@ -201,9 +201,12 @@ body.light nav {
 }
 .started-button2:hover{
   background:transparent;
-  color:#0072FF;
+  color:white;
   border:#003BA4;
   border:1px solid;
+}
+.dark .started-button2:hover{
+  color:white;
 }
 .profile-button
 {

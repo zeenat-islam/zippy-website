@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Zippy Solutions')</title>
-
+    <meta name="description" content="@yield('description', 'Zippy helps startups build scalable digital solutions.')">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Zippy Solutions">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+     <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="@yield('title', 'Zippy Solutions')">
+    <meta property="og:description" content="@yield('description', 'Zippy helps startups build scalable digital solutions.')">
+    <link rel="icon" type="image/png" href="{{ asset('/Assests/images/Adobe Express - file.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="{{ asset('src/output.css') }}"/>
     <link rel="stylesheet" href="{{ asset('src/style.css') }}"/>
@@ -24,7 +32,7 @@
 <body>
     @if(session('success'))
     <div id="success-alert" class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-md shadow-2xl animate-bounce-short" role="alert">
-        <div class="flex items-center p-4 rounded-lg border border-green-200 bg-green-50 dark:bg-[#06254E] dark:border-green-800 shadow-sm">
+        <div class="flex items-center p-4 rounded-lg border border-green-200 bg-green-50 dark:bg-[#06254E] text-black bg-white dark:border-green-800 shadow-sm">
             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
             </svg>
