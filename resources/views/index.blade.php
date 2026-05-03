@@ -131,7 +131,7 @@
 @endforeach
 </div>
 
-<div class="flex md:hidden justify-center items-center mt-8">
+<div class="flex md:hidden justify-center items-center">
       <button onclick="toggleServices()" class="flex services-btn items-center gap-2 text-[#003BA4] dark:text-white text-sm font-medium">
  
      View All Services
@@ -176,42 +176,42 @@
               </p>
 
                 <!-- Stats Row -->
-                <div class="flex items-center gap-8 mt-10 px-4 lg:px-0 ">
-                    
-                    <!-- Stat 1 -->
-                    <div class="flex flex-col gap-2 items-center justify-center">
-                        <div class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
-                            <img loading="lazy" src="{{ asset('Assests/images/svg.svg') }}" alt="Projects Icon" class="w-4 h-4">
-                        </div>
-                        <span class="text-[24px] font-bold text-black dark:text-white flex items-center justify-center">200+</span>
-                        <span class="text-[12px] text-gray-500">Projects Delivered</span>
-                    </div>
+               <div class="flex items-center gap-4 md:gap-8 mt-10 px-4 lg:px-0">
+    
+    <!-- Stat 1 -->
+    <div class="flex flex-col gap-2 items-center justify-center">
+        <div class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
+            <img loading="lazy" src="{{ asset('Assests/images/svg.svg') }}" alt="Projects Icon" class="w-4 h-4">
+        </div>
+        <span class="text-[20px] md:text-[24px] font-bold text-black dark:text-white flex items-center justify-center">200+</span>
+        <span class="text-[11px] md:text-[12px] text-gray-500 text-center">Projects Delivered</span>
+    </div>
 
-                    <!-- Divider -->
-                    <div class="w-[1px] h-12 bg-gray-200"></div>
+    <!-- Divider -->
+    <div class="w-[1px] h-12 bg-gray-200"></div>
 
-                    <!-- Stat 2 -->
-                    <div class="flex flex-col items-center justify-center gap-2">
-                        <div class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
-                            <img src="{{ asset('Assests/images/svg (2).svg') }}" alt="Customers Icon" class="w-4 h-4">
-                        </div>
-                        <span class="text-[24px] font-bold text-black dark:text-white flex items-center justify-center">85%</span>
-                        <span class="text-[12px] text-gray-500">Satisfied customers</span>
-                    </div>
+    <!-- Stat 2 -->
+    <div class="flex flex-col items-center justify-center gap-2">
+        <div class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
+            <img src="{{ asset('Assests/images/svg (2).svg') }}" alt="Customers Icon" class="w-4 h-4">
+        </div>
+        <span class="text-[20px] md:text-[24px] font-bold text-black dark:text-white flex items-center justify-center">85%</span>
+        <span class="text-[11px] md:text-[12px] text-gray-500 text-center">Satisfied customers</span>
+    </div>
 
-                    <!-- Divider -->
-                    <div class="w-[1px] h-12 bg-gray-200"></div>
+    <!-- Divider -->
+    <div class="w-[1px] h-12 bg-gray-200"></div>
 
-                    <!-- Stat 3 -->
-                    <div class="flex flex-col  items-center justify-center gap-2">
-                    <div data-aos="zoom-in" class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
-                        <img src="{{ asset('Assests/images/Vector.svg') }}" alt="Experience Icon" class="w-4 h-4">
-                    </div>
-                        <span class="text-[24px] flex items-center justify-center font-bold text-black dark:text-white">8+</span>
-                        <span class="text-[12px] text-gray-500">years Experience</span>
-                    </div>
+    <!-- Stat 3 -->
+    <div class="flex flex-col items-center justify-center gap-2">
+        <div data-aos="zoom-in" class="w-9 h-9 rounded-full bg-[#00C6FF1A] border flex justify-center items-center">
+            <img src="{{ asset('Assests/images/Vector.svg') }}" alt="Experience Icon" class="w-4 h-4">
+        </div>
+        <span class="text-[20px] md:text-[24px] flex items-center justify-center font-bold text-black dark:text-white">8+</span>
+        <span class="text-[11px] md:text-[12px] text-gray-500 text-center">years Experience</span>
+    </div>
 
-                </div>
+</div>
 
             </div>
 
@@ -322,12 +322,12 @@
   </div>
 
 
-  <div class="flex items-center justify-between lg:pr-6">
+  <div class="flex items-center justify-between lg:pr-6 pb-5 lg:pb-0">
       
       <h2 class="lg:text-[48px] text-black text-[20px] dark:text-white lg:leading-[48px] lg:mt-5 tracking-[0.5px] font-bold" style="font-family: 'Product Sans', sans-serif;">
         What Our Clients Say
       </h2>
-      <div class="flex gap-3">
+      <div class="flex gap-3 ">
       <button id="testimonialPrev" class="w-10 h-10 bg-[#E5E7EB] dark:bg-[#06254E] rounded-full flex items-center justify-center hover:bg-[#00C6FF1A] hover:border hover:border-[#00C6FF] transition-all cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#003BA4" class="size-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />

@@ -12,7 +12,7 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public ContactMessage $contact; // ✅ public hona chahiye
+    public ContactMessage $contact; 
 
     public function __construct(ContactMessage $contact)
     {
@@ -22,6 +22,6 @@ class ContactFormMail extends Mailable
     public function build()
     {
         return $this->subject('Thank you for contacting us')
-                    ->view('contact-confirmation'); // ✅ yeh view exist karna chahiye
+                    ->view('contact-confirmation'); 
     }
 }

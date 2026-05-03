@@ -210,7 +210,7 @@
 
             <button class="mt-4 w-full text-white text-xs font-medium py-2 rounded-full"
                 style="background:linear-gradient(to right,#00C6FF,#0072FF)">
-                Get Started
+                <a href="{{url('contact')}}">Get Started</a>
             </button>
         </div>
     </div>

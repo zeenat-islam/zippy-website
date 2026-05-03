@@ -63,7 +63,7 @@
 
 <section class=" w-full  px-4 md:px-8 mt-20 bg-[#06254E] dark:bg-[#010F23] pb-10" data-purpose="contact-section">
   <!-- Header -->
-  @include('partials.contact-form');
+  @include('partials.contact-form')
 
 </section>
 

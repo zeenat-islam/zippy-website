@@ -1,29 +1,27 @@
-<div class="flex items-center justify-between mb-6">
+<div class="flex items-center justify-between mb-6 gap-4">
     <!-- Left Side: Badge + H1 -->
     
     <div class="flex flex-col gap-4">
-      <button class="self-start badge text-[11px] sm:text-[12px] font-[600] px-4 py-1">
+       <button class="self-start badge text-[11px] sm:text-[12px] font-[600] lg:px-4 py-1">
         OUR TEAMS
       </button>
 
-      <h1 class="text-[22px] sm:text-[28px] md:text-[38px] lg:text-[42px] font-[700] leading-[1.3] tracking-[-0.5px] text-black dark:text-white">
+       <h1 class="text-[22px] sm:text-[28px] md:text-[38px] lg:text-[42px] font-[700] leading-[1.3] tracking-[-0.5px] text-black dark:text-white">
         See Our Skilled Expert Team
       </h1>
     </div>
 
     <!-- Right Side: Arrows -->
-    <div class="flex items-center gap-3">
-      <button id="teamPrev" class="w-10 h-10  bg-[#E5E7EB] dark:bg-[#06254E] rounded-full flex items-center justify-center hover:bg-[#00C6FF1A] hover:border hover:border-[#00C6FF] transition-all cursor-pointer">
+     <div class="flex items-center gap-3 flex-shrink-0 self-end mb-1">
+      <button id="teamPrev" class="w-10 h-10 bg-[#E5E7EB] dark:bg-[#06254E] rounded-full flex items-center justify-center hover:bg-[#00C6FF1A] hover:border hover:border-[#00C6FF] transition-all cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-</svg>
-
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </svg>
       </button>
       <button id="teamNext" class="w-10 h-10 bg-[#E5E7EB] rounded-full dark:bg-[#06254E] flex items-center justify-center hover:bg-[#00C6FF1A] hover:border hover:border-[#00C6FF] transition-all cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
         </svg>
-
       </button>
     </div>
   </div>
@@ -33,7 +31,7 @@
     <div class="swiper-wrapper">
 
         @foreach($team as $member)
-          <div class="swiper-slide">
+          <div class="swiper-slide rounded-2xl ">
     <div class="group team-slider relative flex lg:flex-row flex-col  items-stretch rounded-2xl overflow-hidden h-[260px]
             shadow-lg hover:shadow-2xl hover:shadow-blue-900/40
             transition-all duration-400 ease-out hover:-translate-y-1">

@@ -1,5 +1,5 @@
 <footer class="dark:bg-[#010F23] bg-white">
-    <div class="w-full dark:bg-[#010F23] py-6 bg-white mt-10 lg:px-20 px-6 flex-col lg:flex-row flex justify-between items-center">
+  <div class="w-full dark:bg-[#010F23] py-6 bg-white mt-10 lg:px-20 px-6 flex-col lg:flex-row flex justify-between items-start">
 
         <!-- Logo + Description + Social -->
         <div class="lg:w-[268px]">
@@ -17,7 +17,7 @@
 
         <!-- Quick Links — bilkul same -->
         <div class="flex-col flex self-start lg:items-center lg:w-[268px]">
-            <h2 class="text-[18px] pb-4 dark:text-white">Quick Links</h2>
+            <h2 class="text-[18px] pb-4 dark:text-white text-black">Quick Links</h2>
             <ul class="flex flex-col gap-2">
                 <li><a href="{{ route('home') }}" class="text-[#94A3B8] text-[14px] hover:underline">Home</a></li>
                 <li><a href="{{ route('about') }}" class="text-[#94A3B8] text-[14px] hover:underline">About Us</a></li>
@@ -28,7 +28,7 @@
 
         <!-- What We Do + What We Are with dropdowns -->
         <div class="flex-col flex gap-5 w-[268px] pb-8 self-start lg:items-center">
-            <h2 class="text-[18px] dark:text-white lg:mt-0 mt-4">Quick Links</h2>
+            <h2 class="text-[18px] dark:text-white lg:mt-0 mt-4 text-black">Quick Links</h2>
             <ul class="flex flex-col gap-6">
 
                 <!-- What We Do -->

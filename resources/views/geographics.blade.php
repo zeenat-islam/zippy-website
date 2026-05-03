@@ -80,7 +80,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg) }}"
+          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg') }}"
           alt="London"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -96,7 +96,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg) }}"
+          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg') }}"
           alt="Toronto"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -112,7 +112,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="{{ asset('/Assests/images/anthony-delanoix-hv5pLutRkCI-unsplash.jpg) }}"
+          src="{{ asset('/Assests/images/anthony-delanoix-hv5pLutRkCI-unsplash.jpg') }}"
           alt="New York"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -150,7 +150,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg) }}"
+          src="{{ asset('/Assests/images/luke-stackpoole-mOEqOtmuPG8-unsplash.jpg') }}"
           alt="London"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -166,7 +166,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl">
         <img
-         src="{{ asset('/Assests/images/mwangi-gatheca-qlKaN7eqay8-unsplash.jpg) }}"
+         src="{{ asset('/Assests/images/mwangi-gatheca-qlKaN7eqay8-unsplash.jpg') }}"
           alt="Toronto"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
@@ -182,7 +182,7 @@
                   transition-all duration-500 ease-out
                   hover:-translate-y-1 hover:shadow-xl hidden sm:flex">
         <img
-          src="{{ asset('/Assests/images/anthony-delanoix-hv5pLutRkCI-unsplash.jpg) }}"
+          src="{{ asset('/Assests/images/anthony-delanoix-hv5pLutRkCI-unsplash.jpg') }}"
           alt="New York"
           class="card-img w-full h-full object-cover block brightness-75
                  transition-all duration-700 ease-out"/>
