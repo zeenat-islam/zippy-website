@@ -18,7 +18,8 @@ class BlogsTable
             ->columns([
                 TextColumn::make('title')
                     ->searchable(),
-                ImageColumn::make('image'),
+                ImageColumn::make('image')
+                  ->disk('public'),
                 TextColumn::make('date')
                     ->searchable(),
                 TextColumn::make('read_time')

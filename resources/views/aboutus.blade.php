@@ -302,12 +302,12 @@ clients and Partners.
      
      
 
-<section data-aos="fade-up" class="px-8 py-10 bg-[#F8F8F8] ">
-  @include('partials.team-swiper');
+<section data-aos="fade-up" class="px-8 py-10 bg-[#F8F8F8] dark:bg-[#010F23] ">
+  @include('partials.team-swiper')
 </section>
 <section class=" w-full  px-4 md:px-8 mt-20 bg-[#06254E] dark:bg-[#010F23] pb-10" data-purpose="contact-section">
 
-@include('partials.contact-form');
+@include('partials.contact-form')
 
 </section>
 @endsection

@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <!-- Quick Links — bilkul same -->
+        <!-- Quick Links  -->
         <div class="flex-col flex self-start lg:items-center lg:w-[268px]">
             <h2 class="text-[18px] pb-4 dark:text-white text-black">Quick Links</h2>
             <ul class="flex flex-col gap-2">
@@ -76,9 +76,9 @@
             </ul>
         </div>
 
-        <!-- Contact Us — bilkul same -->
+        <!-- Contact Us  -->
         <div class="flex flex-col gap-2 lg:w-[268px] self-start">
-            <h2 class="pb-3 dark:text-white">Contact Us</h2>
+            <h2 class="pb-3 dark:text-white text-black">Contact Us</h2>
             <div class="flex items-center gap-4">
                 <a href="#" class="w-9 h-9 rounded-full bg-[#00C6FF] flex items-center justify-center hover:opacity-80 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-5">
@@ -106,7 +106,7 @@
 
     </div>
 
-    <!-- Bottom bar — bilkul same -->
+    <!-- Bottom bar -->
     <div class="bg-[#06254E] text-white flex items-center gap-2 justify-between flex-wrap mx-5 lg:mx-20 border rounded-2xl py-3 mb-4 px-6">
         <p class="text-[14px]">© 2026 Zippy Ecom Solutions. All Rights Reserved.</p>
         <div>
